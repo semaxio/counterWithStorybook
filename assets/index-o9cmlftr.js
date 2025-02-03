@@ -53,6 +53,8 @@ Error generating stack: `+u.message+`
         max-width: 340px;
         height: 290px;
         max-height: 400px;
+        gap: 20px;
+        padding: 5px;
     }
 `,lf=({children:i})=>pe.jsx(Vh,{children:i}),Vh=_n.div`
     width: 450px;
@@ -66,6 +68,7 @@ Error generating stack: `+u.message+`
     margin: 0 auto;
     @media (max-width: 768px) {
         max-width: 300px;
+        max-height: 140px;
     }
 `,uf=({value:i,error:a,callback:s})=>pe.jsx(Bh,{value:i,type:"number",error:a,onChange:d=>{s(+d.currentTarget.value)}}),Bh=_n.input`
     width: 150px;
@@ -84,15 +87,6 @@ Error generating stack: `+u.message+`
         & {
             max-width: 150px;
             width: 40%;
-            pointer-events: none;
-        }
-
-        &::-webkit-inner-spin-button,
-        &::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            appearance: none;
-            opacity: 1;
-            pointer-events: auto;
         }
     }
 }
@@ -152,5 +146,6 @@ Error generating stack: `+u.message+`
     padding: 25px 0;
     @media (max-width: 768px) {
         max-width: 300px;
+        padding: 15px 0;
     }
 `,Yh=({settingsMode:i,value:a,valueError:s,generalError:d})=>pe.jsx("span",{style:{fontSize:`${d||i?"30px":"100px"}`,fontWeight:"bold",color:`${s||d?"red":"#00b8ce"}`,fontFamily:"Montserrat, sans-serif"},children:d||i||a});function Gh(){const[i,a]=lt.useState(0),[s,d]=lt.useState(0),[y,w]=lt.useState(5),[C,L]=lt.useState(null),[N,B]=lt.useState(null),[W,M]=lt.useState(null),[F,H]=lt.useState(null),[q,V]=lt.useState(null);lt.useEffect(()=>{const G=localStorage.getItem("countValue");a(G!==null?+G:0);const K=localStorage.getItem("startValue");d(K!==null?+K:0);const A=localStorage.getItem("maxValue");w(A!==null?+A:5)},[]),lt.useEffect(()=>{i===y&&!C&&B("have max value")},[i,y]);function Y(){i<y&&(localStorage.setItem("countValue",`${i+1}`),a(i+1))}function oe(){localStorage.setItem("countValue",`${s}`),a(s),B(null)}const le=G=>{B(null),L("enter values and press 'set'"),G<0||G<=s?(H("incorrect value"),V("incorrect value")):s>=0&&(V(null),M(null),H(null)),w(G)},ee=G=>{B(null),L("enter values and press 'set'"),G<0||G>=y?(M("incorrect value"),V("incorrect value"),d(G)):y>=0&&(H(null),M(null),V(null)),d(G)},Z=()=>{a(s),L(null),localStorage.setItem("maxValue",`${y}`),localStorage.setItem("startValue",`${s}`),localStorage.setItem("countValue",`${s}`)};return pe.jsxs("div",{className:"App",children:[pe.jsxs(rf,{children:[pe.jsx(lf,{children:pe.jsx(Wh,{maxValue:y,startValue:s,maxValueError:F,startValueError:W,startValueHandler:ee,maxValueHandler:le})}),pe.jsx(of,{generalError:q,setSettingsValues:Z,settings:!0,settingsMode:C})]}),pe.jsxs(rf,{children:[pe.jsx(lf,{children:pe.jsx(Yh,{settingsMode:C,value:i,valueError:N,generalError:q})}),pe.jsx(of,{valueError:N,generalError:q,settingsMode:C,settings:!1,increment:Y,resetCount:oe})]})]})}Fp.createRoot(document.getElementById("root")).render(pe.jsx(Gh,{}));
