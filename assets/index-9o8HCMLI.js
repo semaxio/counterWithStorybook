@@ -51,7 +51,7 @@ Error generating stack: `+u.message+`
     font-family: sans-serif;
     @media (max-width: 768px) {
         max-width: 340px;
-        height: 360px;
+        height: 290px;
         max-height: 400px;
     }
 `,lf=({children:i})=>pe.jsx(Vh,{children:i}),Vh=_n.div`
@@ -74,7 +74,7 @@ Error generating stack: `+u.message+`
     font-weight: bold;
     padding-left: 15px;
     text-align: center;
-    
+
 
     background-color: ${i=>i.error?"#ff9393":"#eafafc"};
     border: ${i=>`2px solid ${i.error?"#ff0000":"#00b8ce"} `};
@@ -84,8 +84,18 @@ Error generating stack: `+u.message+`
         & {
             max-width: 150px;
             width: 40%;
+            pointer-events: none;
+        }
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            opacity: 1;
+            pointer-events: auto;
         }
     }
+}
 `,Wh=({maxValue:i,startValue:a,maxValueError:s,startValueError:d,startValueHandler:y,maxValueHandler:w})=>pe.jsxs(Hh,{children:[pe.jsxs("div",{children:[pe.jsx("span",{children:"max value:"}),pe.jsx(uf,{value:i,error:s,callback:w})]}),pe.jsxs("div",{children:[pe.jsx("span",{children:"start value:"}),pe.jsx(uf,{value:a,error:d,callback:y})]})]}),Hh=_n.div`
 
     width: 400px;
