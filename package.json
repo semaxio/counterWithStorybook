@@ -1,11 +1,14 @@
 {
   "name": "counter2",
+  "homepage": "https://github.io/semaxio/counterWithStorybook",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "deploy": "gh-pages -d dist",
+    "predeploy": "pnpm build",
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -34,6 +37,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "eslint-plugin-storybook": "^0.11.2",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "storybook": "8.5.3",
     "typescript": "~5.6.2",

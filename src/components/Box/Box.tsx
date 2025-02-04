@@ -27,8 +27,10 @@ const StyledBox = styled.div`
     font-family: sans-serif;
     @media (max-width: 768px) {
         max-width: 340px;
-        height: 360px;
+        height: 290px;
         max-height: 400px;
+        gap: 20px;
+        padding: 5px;
     }
 `
 

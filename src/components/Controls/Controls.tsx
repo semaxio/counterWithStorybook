@@ -49,5 +49,6 @@ const StyledControls = styled.div`
     padding: 25px 0;
     @media (max-width: 768px) {
         max-width: 300px;
+        padding: 15px 0;
     }
 `

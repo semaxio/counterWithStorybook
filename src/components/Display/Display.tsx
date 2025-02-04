@@ -26,5 +26,6 @@ const StyledDisplay = styled.div`
     margin: 0 auto;
     @media (max-width: 768px) {
         max-width: 300px;
+        max-height: 140px;
     }
 `
