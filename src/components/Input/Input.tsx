@@ -12,12 +12,12 @@ export const Input = ({value, error, callback}: InputType) => {
 
 
   const [inputMode, setInputMode] = useState<'numeric' | 'none'>('numeric');
+  const [readonly, setReadonly] = useState<boolean>(false);
 
   useEffect(() => {
     if (window.innerWidth <= 768) {
       setInputMode('none');
-    } else {
-      setInputMode('numeric');
+      setReadonly(true);
     }
   }, [])
 
@@ -26,6 +26,7 @@ export const Input = ({value, error, callback}: InputType) => {
           value={value}
           type={'number'}
           inputMode={inputMode}
+          readOnly={readonly}
           error={error}
           onChange={(e: ChangeEvent<HTMLInputElement>) => callback(+e.currentTarget.value)}
       />
